@@ -24,5 +24,3 @@ public class Main {
         userDao.dropUsersTable();
     }
 }
-
-//Главное - трай с ресурсами и нет головняка с закрытиями. try (Statement statement = connection.createStatement()) {

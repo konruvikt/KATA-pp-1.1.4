@@ -11,30 +11,30 @@ public class UserServiceImpl implements UserService {
 
     UserDao userDao = new UserDaoJDBCImpl();
 
-    public UserServiceImpl() throws SQLException {
+    public UserServiceImpl() {
     }
 
-    public void createUsersTable() {
+    public void createUsersTable() throws SQLException {
         userDao.createUsersTable();
     }
 
-    public void dropUsersTable() {
+    public void dropUsersTable() throws SQLException {
         userDao.dropUsersTable();
     }
 
-    public void saveUser(String name, String lastName, byte age) {
+    public void saveUser(String name, String lastName, byte age) throws SQLException {
         userDao.saveUser(name, lastName, age);
     }
 
-    public void removeUserById(long id) {
+    public void removeUserById(long id) throws SQLException {
         userDao.removeUserById(id);
     }
 
-    public List<User> getAllUsers() {
+    public List<User> getAllUsers() throws SQLException {
         return userDao.getAllUsers();
     }
 
-    public void cleanUsersTable() {
+    public void cleanUsersTable() throws SQLException {
         userDao.cleanUsersTable();
     }
 }
